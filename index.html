@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Document</title>
+</head>
+<body>
+    <div class="cont-bg text-center d-flex flex-column pt-5">
+        <h1 class="traffic-light">Traffic Light</h1>
+        <div class="d-flex flex-row justify-content-center mr-5">
+            <div class="d-flex flex-column justify-content-center mr-3">
+                <button id="stopButton" class="button" onclick="turnOnRed()">Stop</button>
+                <button id="readyButton" class="button" onclick="turnOnYellow()">Ready</button>
+                <button id="goButton" class="button" onclick="turnOnGreen()">Go</button>
+            </div>
+            <div class="traffic-pole text-center d-flex flex-column justify-content-center">
+                <div class="d-flex flex-row justify-content-center">
+                    <h1 id="stopLight" class="traffic-pole-light"> </h1>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <h1 id="readyLight" class="traffic-pole-light"> </h1>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <h1 id="goLight" class="traffic-pole-light"> </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+  <style>
+    .cont-bg {
+    background-color: #86d2f2;
+    height: 100vh;
+}
+
+.traffic-light {
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+.traffic-pole {
+    height: 250px;
+    width: 90px;
+    background-color: #1f1d41;
+    border-radius: 24px;
+}
+
+.traffic-pole-light {
+    text-align: center;
+    height: 42px;
+    width: 42px;
+    background-color: #4b5069;
+    border-radius: 42px;
+    margin: 14px;
+}
+
+.button {
+    font-family: "Roboto";
+    border-width: 0px;
+    border-radius: 8px;
+    margin: 16px;
+    background-color: #1f1d41;
+    color: #ffffff;
+    height: 40px;
+    width: 80px;
+    padding: 8px;
+}
+    
+    
+  </style>
+  
+  
+  <script>
+    function turnOnRed() {
+    document.getElementById("stopLight").style.backgroundColor = "red";
+    document.getElementById("stopButton").style.backgroundColor = "red";
+}
+
+function turnOnYellow() {
+    document.getElementById("readyLight").style.backgroundColor = "yellow";
+    document.getElementById("readyButton").style.backgroundColor = "yellow";
+}
+
+function turnOnGreen() {
+    document.getElementById("goLight").style.backgroundColor = "green";
+    document.getElementById("goButton").style.backgroundColor = "green";
+}
+  </script>
+  
+  
+  
+</body>
+</html>
